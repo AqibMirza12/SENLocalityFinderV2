@@ -1,0 +1,58 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+@*<nav>
+    <div class="nav-wrapper">
+        <div class="col s12">
+            <a asp-page="./Index" class="breadcrumb">Home</a>
+            <a asp-page="./Contact" class="breadcrumb">Contact Us</a>
+        </div>
+    </div>
+</nav>*@
+
+<h2>@ViewData["Title"]</h2>
+
+<p>Please use the contact form to contact us about any enquiry you may have regarding SEN Locality Finder and we will respond in a timely fashion</p>
+
+<div class="row">
+    <form class="col s12" role="form">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input placeholder="First Name" id="first_name" type="text" pattern="[A-Za-z]+" title="Please enter letters and characters only" class="validate"> <!-- HTML5 validation through the class 'validate' -->
+                <label for="first_name">First Name</label>
+            </div>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input placeholder="Surname" id="last_name" type="text" pattern="[A-Za-z]+" title="Please enter letters and characters only" class="validate"> <!-- HTML5 validation through the class 'validate' -->
+                <label for="last_name">Last Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input placeholder="Email Address" id="email" type="email" class="validate">
+                <span class="helper-text" data-error="Please enter a valid email address" data-success="right">Helper text</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">text_fields</i>
+                    <textarea placeholder="Your Message" id="textarea" pattern="[A-Za-z]+" title="Please enter letters and characters only" class="materialize-textarea"></textarea>
+                    <label for="Msg">Your Message</label>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="waves-effect waves-light btn" asp-page="./ConfirmationPage">Submit Form</a>
+
+    </form>
+</div>

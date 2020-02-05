@@ -1,0 +1,7 @@
+﻿input {
+    width: 100%; /* Set width to 100% for search box */
+    border: 3px solid; /* Set a border of 3px */
+    padding: 12px 20px; /* Spacing the elements content to make it more readable */
+    margin: 8px 0; /* Space separating this object from the other objects on the page */
+    box-sizing: border-box; /* Setting divs to the same width and height - CSS3 */
+}

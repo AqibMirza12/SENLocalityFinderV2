@@ -1,0 +1,35 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead, tr { /* Set border and padding for table head and table rows */
+    border: 1px solid black;
+    padding: 5px;
+}
+
+thead { /* Set table head background to white */
+    background-color: white;
+}
+
+table td + td { /* Set table row divider */
+    border-left: 2px solid black;
+}
+
+
+table th + th { /* Set column row divider */
+    border-left: 2px solid black;
+}
+
+td:nth-child(odd) { /* Set colour of odd columns */
+    background: #80f442;
+}
+
+td:nth-child(even) { /* Set colour of even columns */
+    background: #42f4cb;
+}
+
+td{
+    font-family: sans-serif;
+}
+

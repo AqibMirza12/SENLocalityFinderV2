@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEN Locality Finder", "SEN Locality Finder\SEN Locality Finder.csproj", "{AF2DACDF-1F86-45FA-9AF7-5DDD17B51418}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{307341DC-9167-4948-BA66-54DFDD564053}"
+	ProjectSection(SolutionItems) = preProject
+		.filenesting.json = .filenesting.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF2DACDF-1F86-45FA-9AF7-5DDD17B51418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF2DACDF-1F86-45FA-9AF7-5DDD17B51418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF2DACDF-1F86-45FA-9AF7-5DDD17B51418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF2DACDF-1F86-45FA-9AF7-5DDD17B51418}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FA24286-8D98-4E2A-87CD-0E7B34577FFC}
+	EndGlobalSection
+EndGlobal

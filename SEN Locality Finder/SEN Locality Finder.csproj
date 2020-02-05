@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
+    <UserSecretsId>59691423-750c-42ac-b05b-c9b8376d5851</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETCOREAPP2_2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Helper\**" />
+    <Compile Remove="wwwroot\lib - Copy\**" />
+    <Compile Remove="wwwroot\lib\jquery-validation-unobtrusive\**" />
+    <Content Remove="Helper\**" />
+    <Content Remove="wwwroot\lib - Copy\**" />
+    <Content Remove="wwwroot\lib\jquery-validation-unobtrusive\**" />
+    <EmbeddedResource Remove="Helper\**" />
+    <EmbeddedResource Remove="wwwroot\lib - Copy\**" />
+    <EmbeddedResource Remove="wwwroot\lib\jquery-validation-unobtrusive\**" />
+    <None Remove="Helper\**" />
+    <None Remove="wwwroot\lib - Copy\**" />
+    <None Remove="wwwroot\lib\jquery-validation-unobtrusive\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\GoogleTranslate.cshtml" />
+    <Content Remove="Pages\Reasons.cshtml" />
+    <Content Remove="wwwroot\DialogCentre.css" />
+    <Content Remove="wwwroot\Google maps.jpg" />
+    <Content Remove="wwwroot\images\Dark Blue.png" />
+    <Content Remove="wwwroot\images\green.jpg" />
+    <Content Remove="wwwroot\images\light blue.jpg" />
+    <Content Remove="wwwroot\searchboxcenter.css" />
+    <Content Remove="wwwroot\StyleSheets\Categories.css" />
+    <Content Remove="wwwroot\StyleSheets\ExpandingObj.css" />
+    <Content Remove="wwwroot\StyleSheets\GoogleTranslate.css" />
+    <Content Remove="wwwroot\StyleSheets\inputElements.css" />
+    <Content Remove="wwwroot\StyleSheets\SearchForm.css" />
+    <Content Remove="wwwroot\StyleSheets\Style.css" />
+    <Content Remove="wwwroot\Tablestyling.css" />
+    <Content Remove="wwwroot\Tablinks.js" />
+    <Content Remove="wwwroot\TextEnlargement.js" />
+    <Content Remove="wwwroot\the guardian.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="HighContrast.js" />
+    <None Remove="Pages\Shared\AutocompleteforGMaps.js" />
+    <None Remove="Pages\Shared\GoogleMapsAPISearch.html" />
+    <None Remove="Pages\Shared\GoogleMapsStyling.css" />
+    <None Remove="Pages\Shared\HighContrast.scss" />
+    <None Remove="Pages\Sitemap.xml" />
+    <None Remove="Pages\WindowNavigator.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\Contactform validation.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jQuery" Version="3.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\HTML\16-19 academies.html" />
+    <None Include="wwwroot\HTML\Colleges.html" />
+    <None Include="wwwroot\HTML\SEN Conditions.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\StyleSheets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\HTML\Colleges.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\HTML\Primary.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\HTML\PRU.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\HTML\Secondary.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

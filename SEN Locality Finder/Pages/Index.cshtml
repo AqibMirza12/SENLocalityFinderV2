@@ -1,0 +1,167 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["SEN Locality Finder"] = "Home page";
+}
+
+<p>You can use SEN Locality Finder to find a school via the search form or Google Map to find a suitable institution for your children. 
+You can use also this website to find out more about a specific institution by searching using your desired criteria and by clicking on the Ofsted Link for the institution in the search results page. 
+</p>
+
+<h2>Search</h2>
+<p>Refined Search Form:</p>
+<wbr />
+<div class="form">
+    <form role="search" id="search_form" name="Search_data" method="post" asp-page="SearchConfirmationPage">
+        <section aria-required="true" aria-live="assertive">
+            @*<div class="input-field col s12">
+                    <i class="material-icons prefix">filter_list</i>
+                    <select asp-for="Age_sel">
+                        <option value="" selected>Choose your option</option>
+                        <option value="1">Nursery: 3-4</option>
+                        <option value="2">Pupil Referral Units: 5-11</option>
+                        <option value="3">Primary School: 5-11</option>
+                        <option value="4">Secondary School: 12-16</option>
+                        <option value="5">FE Colleges: 16+</option>
+                        <option value="6">16-19 Academies</option>
+                        <option value="7">Special Schools: All Ages</option>
+                    </select>
+                    <label>Age Range Selection</label>
+                </div>*@
+
+            <div class="input-field col s12">
+                <i class="material-icons prefix">filter_list</i>
+                <select asp-for="Ins_sel">
+                    <option value="" selected>Choose your option</option>
+                    <option value="1">Nursery</option>
+                    <option value="2">Primary Schools</option>
+                    <option value="3">Secondary</option>
+                    <option value="4">FE Colleges</option>
+                    <option value="5">16-19 Academies</option>
+                    <option value="6">Special Schools</option>
+                    <option value="7">Pupil Referral Units</option>
+                </select>
+                <label>Institution Type</label>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    $('input.autocomplete').autocomplete({
+                        minLength: 2,
+                        limit: 2,
+                        data: {
+                            "ADHD": null,
+                            "Angelman Syndrome": null,
+                            "Aniridia": null,
+                            "Anorexia Nervosa": null,
+                            "Anxiety Disorders": null,
+                            "Aphasia": null,
+                            "Apraxia": null,
+                            "Arthritis ": null,
+                            "Asperger Syndrome": null,
+                            "Asthma": null,
+                            "Attachment Disorder": null,
+                            "Atypical Autism": null,
+                            "Autism (ASD)": null,
+                            "Behavioural, Emotional and Social Difficulties (BE)": null,
+                            "Body Dysmorphic Disorder (BDD)": null,
+                            "Borderline Personality Disorder (BPD)": null,
+                            "Brain Injury": null,
+                            "Bulimia": null,
+                            "Cerebellar Ataxia": null,
+                            "Cerebral Palsy (CP)": null,
+                            "Challenging Behaviour": null,
+                            "Conduct Disorder": null,
+                            "Crohn's Disease": null,
+                            "Cystic Fibrosis (CF)": null,
+                            "Diabetes": null,
+                            "Down's Syndrome": null,
+                            "Duane Syndrome": null,
+                            "Dysarthria": null,
+                            "Dyscalculia": null,
+                            "Dysgraphia": null,
+                            "Dyslexia": null,
+                            "Dysnomia": null,
+                            "Dysplasia": null,
+                            "Dyspraxia": null,
+                            "Echolalia": null,
+                            "Ehlers-Danlos Syndrome": null,
+                            "Emotional Literac": null,
+                            "Epilepsy": null,
+                            "Fragile X Syndrome": null,
+                            "Global Developmental Delay": null,
+                            "Glue Ear": null,
+                            "Graphomotor Skills": null,
+                            "Guillain Barré": null,
+                            "Hearing Impairment (HI)": null,
+                            "Heller's Syndrome": null,
+                            "Hydrocephalus": null,
+                            "Hyperacusis": null,
+                            "Hyperlexia": null,
+                            "Hypermobility": null,
+                            "Hypotonia": null,
+                            "Irlen Syndrome/Scotopic Sensitivity": null,
+                            "Landau Kleffner Syndrome": null,
+                            "Learning Difficulties": null,
+                            "Moderate Learning Difficulties (MLD)": null,
+                            "Mood Disorder": null,
+                            "Mowat-Wilson Syndrome": null,
+                            "Multi-Sensory Impairment (MSI) ": null,
+                            "Muscular Dystrophy": null,
+                            "Neurofibromatosis": null,
+                            "Noonan Syndrome": null,
+                            "Non-Verbal Learning Difficulties (NLD)": null,
+                            "Obsessive Compulsive Disorder (OCD)": null,
+                            "Oppositional Defiant Disorder (ODD)": null,
+                            "Osteogenesis Imperfecta (OI) (Brittle Bone Disease)": null,
+                            "Pathological Demand Avoidance (PDA)": null,
+                            "﻿Pervasive Developmental Disorder (PDD)": null,
+                            "Peter's Anomaly": null,
+                            "Physical Disability (PD)": null,
+                            "Pica": null,
+                            "Profound and Multiple Learning Difficulties (PMLD)": null,
+                            "Prader-Willi Syndrome": null,
+                            "Proprioception": null,
+                            "Rett Syndrome": null,
+                            "Scoliosis": null,
+                            "Selective Mutism": null,
+                            "Semantic Pragmatic Disorder": null,
+                            "Sensory Integration Disorder (SID)": null,
+                            "Severe Learning Difficulties (SLD)": null,
+                            "Sickle Cell Anaemia": null,
+                            "Smith-Magenis Syndrome": null,
+                            "Social Skills": null,
+                            "Sotos Syndrome": null,
+                            "Speech and Language Disorder": null,
+                            "Spina Bifida": null,
+                            "Tactile Defensiveness": null,
+                            "Turner Syndrome": null,
+                            "Ulcerative Colitis": null,
+                            "Usher Syndrome": null,
+                            "Visual Impairment": null,
+                            "Waardenburg Syndrome": null,
+                            "Williams Syndrome": null,
+                            "Working Memory": null,
+                            "Worster-Drought Syndrome (WDS)": null
+                        },
+                    });
+                });
+            </script>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">text_fields</i>
+                <input asp-for="Conditions_txt" placeholder="SEND Conditions Search" type="text" id="autocomplete-input" class="autocomplete"> <!-- HTML5 validation through the class 'validate' -->
+                <label for="SEND Conditions">SEND Condition Selection</label>
+            </div>
+        </section>
+        <br>
+        <input type="submit" value="Submit Search Form" class="waves-effect waves-light btn" asp-page="./SearchConfirmationPage" />
+    </form>
+
+</div>
+
+<hr />
+
+<p>Search from Map:</p>
+<p>Please use the View Larger Map button to maximise the Google map to full screen. It will open in a new tab. <i class="material-icons">map</i></p>
+<embed src="https://www.google.com/maps/d/embed?mid=1kBJydIo5r5xIt-hpk93hQJv5CJwyxvaQ" class="map_class">

@@ -1,0 +1,220 @@
+﻿@page
+@model SearchConfirmationPageModel
+@{
+}
+
+<h1>Your Search Results</h1>
+
+@if (Model.Ins_sel == "1")
+{
+    @Html.Partial("Partials/_Nursery")
+}
+else if (Model.Ins_sel == "2")
+{
+    @Html.Partial("Partials/_Primary")
+}
+else if (Model.Ins_sel == "3")
+{
+    @Html.Partial("Partials/_Secondary")
+}
+else if (Model.Ins_sel == "4")
+{
+    @Html.Partial("Partials/_Colleges")
+}
+else if (Model.Ins_sel == "5")
+{
+    @Html.Partial("Partials/_Academy")
+}
+else if (Model.Ins_sel == "6")
+{
+    @Html.Partial("Partials/_Special")
+}
+else if (Model.Ins_sel == "7")
+{
+    @Html.Partial("Partials/_PRU")
+}
+else
+{
+    <p><b>No Table selected. Only applies if 'Choose an Option' has been chosen in the Institution Type list.</b></p>
+}
+
+<p>The search results table supports selection, highlighting, clipboard actions (copy and paste), movable columns, multiple sorts on your selected table (through using CTRL + click or tap) and also remembers your layout preferences for the table.</p>
+<p>To copy and paste a specific set of data into another location e.g. a Microsoft Word document. Please select your desired rows by clicking the row(s) of data by using CTRL + C  to copy and CTRL + V  to paste. </p>
+
+<script>
+    var table = new Tabulator("#selectedTable", {
+        height: "350px",
+        layout: "fitData",
+        pagination: "local",
+        paginationSize: 10,
+        //paginationSizeSelector: true,
+        //paginationSizeSelector: [10, 25, 50, 100],
+        movableColumns: true,
+        persistentLayout: true,
+        //persistentSort: true,
+        clipboard: true,
+        selectable: true
+    });
+</script>
+
+<hr />
+
+<embed src="https://www.google.com/maps/d/embed?mid=1kBJydIo5r5xIt-hpk93hQJv5CJwyxvaQ" class="thumbnail_map">
+<p>Please use the View Larger Map button to full screen the map.</p>
+
+<br />
+<br />
+
+<h2>Perform a New Search:</h2>
+
+<div class="form">
+    <form role="search" id="search_form" name="Search_data" method="post">
+        @*<div class="input-field col s12">
+            <i class="material-icons prefix">filter_list</i>
+            <select asp-for="Age_sel">
+                <option value="" selected>Choose your option</option>
+                <option value="1">Nursery: 3-4</option>
+                <option value="2">Pupil Referral Units: 5-11</option>
+                <option value="3">Primary School: 5-11</option>
+                <option value="4">Secondary School: 12-16</option>
+                <option value="5">FE Colleges: 16+</option>
+                <option value="6">16-19 Academies</option>
+                <option value="7">Special Schools: All Ages</option>
+            </select>
+            <label>Age Range Selection</label>
+        </div>*@
+
+        <div class="input-field col s12">
+            <i class="material-icons prefix">filter_list</i>
+            <select asp-for="Ins_sel">
+                <option value="" selected>Choose your option</option>
+                <option value="1">Nursery</option>
+                <option value="2">Primary Schools</option>
+                <option value="3">Secondary</option>
+                <option value="4">FE Colleges</option>
+                <option value="5">16-19 Academies</option>
+                <option value="6">Special Schools</option>
+                <option value="7">Pupil Referral Units</option>
+            </select>
+            <label>Institution Type</label>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('input.autocomplete').autocomplete({
+                    minLength: 2,
+                    limit: 2,
+                    data: {
+                        "ADHD": null,
+                        "Angelman Syndrome": null,
+                        "Aniridia": null,
+                        "Anorexia Nervosa": null,
+                        "Anxiety Disorders": null,
+                        "Aphasia": null,
+                        "Apraxia": null,
+                        "Arthritis ": null,
+                        "Asperger Syndrome": null,
+                        "Asthma": null,
+                        "Attachment Disorder": null,
+                        "Atypical Autism": null,
+                        "Autism (ASD)": null,
+                        "Behavioural, Emotional and Social Difficulties (BE)": null,
+                        "Body Dysmorphic Disorder (BDD)": null,
+                        "Borderline Personality Disorder (BPD)": null,
+                        "Brain Injury": null,
+                        "Bulimia": null,
+                        "Cerebellar Ataxia": null,
+                        "Cerebral Palsy (CP)": null,
+                        "Challenging Behaviour": null,
+                        "Conduct Disorder": null,
+                        "Crohn's Disease": null,
+                        "Cystic Fibrosis (CF)": null,
+                        "Diabetes": null,
+                        "Down's Syndrome": null,
+                        "Duane Syndrome": null,
+                        "Dysarthria": null,
+                        "Dyscalculia": null,
+                        "Dysgraphia": null,
+                        "Dyslexia": null,
+                        "Dysnomia": null,
+                        "Dysplasia": null,
+                        "Dyspraxia": null,
+                        "Echolalia": null,
+                        "Ehlers-Danlos Syndrome": null,
+                        "Emotional Literac": null,
+                        "Epilepsy": null,
+                        "Fragile X Syndrome": null,
+                        "Global Developmental Delay": null,
+                        "Glue Ear": null,
+                        "Graphomotor Skills": null,
+                        "Guillain Barré": null,
+                        "Hearing Impairment (HI)": null,
+                        "Heller's Syndrome": null,
+                        "Hydrocephalus": null,
+                        "Hyperacusis": null,
+                        "Hyperlexia": null,
+                        "Hypermobility": null,
+                        "Hypotonia": null,
+                        "Irlen Syndrome/Scotopic Sensitivity": null,
+                        "Landau Kleffner Syndrome": null,
+                        "Learning Difficulties": null,
+                        "Moderate Learning Difficulties (MLD)": null,
+                        "Mood Disorder": null,
+                        "Mowat-Wilson Syndrome": null,
+                        "Multi-Sensory Impairment (MSI) ": null,
+                        "Muscular Dystrophy": null,
+                        "Neurofibromatosis": null,
+                        "Noonan Syndrome": null,
+                        "Non-Verbal Learning Difficulties (NLD)": null,
+                        "Obsessive Compulsive Disorder (OCD)": null,
+                        "Oppositional Defiant Disorder (ODD)": null,
+                        "Osteogenesis Imperfecta (OI) (Brittle Bone Disease)": null,
+                        "Pathological Demand Avoidance (PDA)": null,
+                        "﻿Pervasive Developmental Disorder (PDD)": null,
+                        "Peter's Anomaly": null,
+                        "Physical Disability (PD)": null,
+                        "Pica": null,
+                        "Profound and Multiple Learning Difficulties (PMLD)": null,
+                        "Prader-Willi Syndrome": null,
+                        "Proprioception": null,
+                        "Rett Syndrome": null,
+                        "Scoliosis": null,
+                        "Selective Mutism": null,
+                        "Semantic Pragmatic Disorder": null,
+                        "Sensory Integration Disorder (SID)": null,
+                        "Severe Learning Difficulties (SLD)": null,
+                        "Sickle Cell Anaemia": null,
+                        "Smith-Magenis Syndrome": null,
+                        "Social Skills": null,
+                        "Sotos Syndrome": null,
+                        "Speech and Language Disorder": null,
+                        "Spina Bifida": null,
+                        "Tactile Defensiveness": null,
+                        "Turner Syndrome": null,
+                        "Ulcerative Colitis": null,
+                        "Usher Syndrome": null,
+                        "Visual Impairment": null,
+                        "Waardenburg Syndrome": null,
+                        "Williams Syndrome": null,
+                        "Working Memory": null,
+                        "Worster-Drought Syndrome (WDS)": null
+                    },
+                });
+            });
+        </script>
+
+
+        <div class="input-field col s6">
+            <i class="material-icons prefix">text_fields</i>
+            <input asp-for="Conditions_txt" placeholder="SEND Conditions Search" type="text" id="autocomplete-input" class="autocomplete">
+            <label for="SEND Conditions">SEND Condition Selection</label>
+        </div>
+
+        <br />
+        <br />
+
+        <input type="submit" value="Perform New Search" class="waves-effect waves-light btn" asp-page="./SearchConfirmationPage" />
+
+    </form>
+
+</div>
